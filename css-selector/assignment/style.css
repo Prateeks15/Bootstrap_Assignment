@@ -1,0 +1,213 @@
+:root {
+  --padding: 60px;
+  --border: 1px solid #3d3b3b;
+  --dark-color: #3d3c3c;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 10;
+  border-bottom: 4px solid black;
+  padding: 6px var(--padding);
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+  padding: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+}
+
+a::after {
+  content: "";
+  display: block;
+  padding-bottom: 10px;
+  margin: 0px 12px;
+  border-bottom: 3px solid #bd571c;
+  position: absolute;
+  width: 0;
+  left: 0;
+  transition: width 1s ease;
+}
+
+a:hover::after {
+  width: 85%;
+}
+
+a:hover {
+  color: blue;
+}
+
+.home-section {
+  margin-top: 0;
+  padding: 0px;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner > img {
+  height: 90vh;
+  width: 100%;
+}
+
+.banner::after {
+  content: "EVENT MANAGMENT";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 80px;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 54px;
+  margin: 0px;
+  padding-bottom: 36px;
+  color: #0f033b;
+  text-shadow: 3px 3px 3px;
+}
+
+section {
+  background: #7cc4f3;
+  padding: var(--padding);
+}
+
+section:nth-child(3n + 1) {
+  background-color: #162c3b;
+}
+
+.about-section
+{
+background-color: #bec9cf;
+}
+
+.about-section > div {
+  display: flex;
+}
+
+.about-section .content {
+  padding: 0px 40px;
+  line-height: 1.5rem;
+  margin-left: 20px;
+  border: var(--border);
+  box-shadow: 5px -5px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+.services-section > h1 {
+  color: rgb(204, 187, 187);
+}
+.services-section > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-box {
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  background: #faeeee;
+  border-radius: 0%;
+  box-shadow: 10px 10px 3px #5c666d;
+  transition: color, background, border-radius 0.3s ease-in-out;
+  /* transition-property: color, background, border-radius;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out; */
+}
+
+.service-box:hover {
+  background-color: #c7405d;
+  color: white;
+  border-radius: 20%;
+}
+
+.services-section i {
+  font-size: 40px;
+  color: var(--dark-color);
+}
+
+.contact-section
+{
+  background-color: rgb(192, 177, 177);
+}
+.contact-section > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-box {
+  text-align: center;
+  padding: 30px;
+  width: 250px;
+  background: cornsilk;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-box:hover {
+  color: white;
+}
+
+.contact-box::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(24, 121, 138);
+  height: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.contact-box:hover::before {
+  height: 100%;
+}
+
+.contact-section > div div:first-child {
+  width: 350px;
+}
+
+.contact-section i {
+  font-size: 40px;
+  border-radius: 50%;
+  border: 3px dotted rgb(35, 165, 216);
+  padding: 16px;
+}
+
+:target {
+  border: 4px solid rgb(180, 104, 94);
+}
