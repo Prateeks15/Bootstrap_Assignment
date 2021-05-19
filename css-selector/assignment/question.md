@@ -4,7 +4,7 @@ About
 Services 
 Contact
 
-Reference link for the single-page website: https://bootstrapmade.com/demo/BizLand/
+
 
 QUES : Perform the following task on the created websites
 
